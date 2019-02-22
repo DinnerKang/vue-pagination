@@ -1,6 +1,6 @@
 {
   "name": "@dinnerkang/vue-pagination",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "pagination",
   "author": "DinnerKang <jenhyuk0318@gmail.com>",
   "main": "dist/vue-pagination.js",
@@ -8,15 +8,17 @@
     "build": "rimraf ./dist && webpack --config ./webpack.config.js"
   },
   "keywords": [
-    "vue",
-    "vuejs",
-    "pagination",
-    "vue pagination",
+    "Vue",
+    "Vuejs",
+    "Pagination",
+    "Vue Pagination",
+    "뷰",
     "뷰 페이징"
+    
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DinnerKang/vue-pagination.git"
+    "url": "https://github.com/DinnerKang/vue-pagination.git"
   },
   "license": "MIT",
   "dependencies": {

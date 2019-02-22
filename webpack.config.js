@@ -44,7 +44,7 @@ module.exports = [
         output: {
             filename: 'vue-pagination.js',
             libraryTarget: 'window',
-            library: 'vue/pagination'
+            library: 'Pagination'
         }
     }),
   
@@ -54,7 +54,7 @@ module.exports = [
         output: {
           filename: 'vue-pagination.js',
           libraryTarget: 'umd',
-          library: 'vue/pagination',
+          library: 'Pagination',
           umdNamedDefine: true
         }
     })
