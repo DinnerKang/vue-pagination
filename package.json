@@ -1,9 +1,8 @@
 {
-  "name": "@vue/pagination",
+  "name": "vue2-pagination",
   "version": "0.0.1",
   "description": "pagination",
   "author": "DinnerKang <jenhyuk0318@gmail.com>",
-  "private": true,
   "main": "dist/vue-pagination.js",
   "scripts": {
     "build": "rimraf ./dist && webpack --config ./webpack.config.js"
@@ -13,6 +12,10 @@
     "pagination",
     "vue pagination"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DinnerKang/vue-pagination.git"
+  },
   "license": "MIT",
   "dependencies": {
     "vue": "^2.5.2"
