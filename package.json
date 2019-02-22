@@ -1,5 +1,5 @@
 {
-  "name": "@vue-pagination",
+  "name": "@dinnerkang/vue-pagination",
   "version": "0.0.1",
   "description": "pagination",
   "author": "DinnerKang <jenhyuk0318@gmail.com>",
@@ -9,8 +9,10 @@
   },
   "keywords": [
     "vue",
+    "vuejs",
     "pagination",
-    "vue pagination"
+    "vue pagination",
+    "뷰 페이징"
   ],
   "repository": {
     "type": "git",
