@@ -37,24 +37,12 @@ var commonConfig = {
   };
 
 module.exports = [
-
-    // 설정 1: 브라우저 환경에서 CDN으로 사용하기 위해
-    merge(commonConfig, {
-        entry: path.resolve(__dirname + '/src/plugin.js'),
-        output: {
-            filename: 'vue-pagination.js',
-            libraryTarget: 'window',
-            library: 'Pagination'
-        }
-    }),
-  
-    // Config 2: npm install로 참조하여 사용하기 위해
     merge(commonConfig, {
         entry: path.resolve(__dirname + '/src/App.vue'),
         output: {
           filename: 'vue-pagination.js',
           libraryTarget: 'umd',
-          library: 'Pagination',
+          library: 'vue-pagination',
           umdNamedDefine: true
         }
     })

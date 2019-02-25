@@ -1,6 +1,6 @@
 {
   "name": "@dinnerkang/vue-pagination",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "pagination",
   "author": "DinnerKang <jenhyuk0318@gmail.com>",
   "main": "dist/vue-pagination.js",
@@ -14,7 +14,6 @@
     "Vue Pagination",
     "뷰",
     "뷰 페이징"
-    
   ],
   "repository": {
     "type": "git",
