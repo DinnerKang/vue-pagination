@@ -47,10 +47,8 @@
 export default {
   data() {
     return {
-      menu: "",
       list_row: "",
       list_header: [],
-      host: this.$store.state.host,
       pageNumber: 0,
       size: 10,
       no: [],
@@ -63,7 +61,9 @@ export default {
       required: true
     }
   },
-  created() {},
+  created() {
+    this.makeList();
+  },
   watch: {
     data: function(val) {
       this.makeList();
@@ -71,6 +71,7 @@ export default {
   },
   methods: {
     makeList: function() {
+      
       this.list_header = Object.keys(this.data[0]);
       this.list_header.unshift("No");
       this.list_row = this.data.length;

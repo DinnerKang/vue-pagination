@@ -42,7 +42,7 @@ module.exports = [
         output: {
           filename: 'vue-pagination.js',
           libraryTarget: 'umd',
-          library: 'vue-pagination',
+          library: 'Pagination',
           umdNamedDefine: true
         }
     })
