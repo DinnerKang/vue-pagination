@@ -5,8 +5,10 @@
 
 ## Introduction
 
-You can create a bulletin board with just array data.
-Use it comfortably !
+You can create a bulletin board with just array data.<br>
+Use it comfortably !<br>
+
+I want git star...
 
 ## installation
 
