@@ -40,6 +40,8 @@ export default{
 </script>
 ```
 
+<img src="./assets/board.png">
+
 Attention is ':data' required
 
 
