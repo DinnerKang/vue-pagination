@@ -42,8 +42,7 @@ export default{
 
 <img src="./assets/board.png">
 
-Attention is ':data' required
-
+You must have a **':data'** 
 
 ## Questions or Issue
 
