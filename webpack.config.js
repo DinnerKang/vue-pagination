@@ -3,47 +3,55 @@ const merge = require('webpack-merge');
 const path = require('path');
 
 var commonConfig = {
-    output: {
-        path: path.resolve(__dirname + '/dist/'),
-    },
-    module: {
-      loaders: [
-        {
-          test: /\.js$/,
-          loader: 'babel-loader',
-          include: __dirname,
-          exclude: /node_modules/
-        },
-        {
-          test: /\.vue$/,
-          loader: 'vue-loader'
-        },
-        {
-          test: /\.css$/,
-          loader: 'style!less!css'
+  output: {
+    path: path.resolve(__dirname + '/dist/'),
+  },
+  module: {
+    loaders: [{
+        test: /\.js$/,
+        loader: 'babel-loader',
+        include: __dirname,
+        exclude: /node_modules/
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: 'style!less!css'
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          name: '[name].[ext]?[hash]',
+          limit: 10000,
+          publicPath: './dist/',
         }
-      ]
-    },
-    plugins: [
-      new webpack.optimize.UglifyJsPlugin( {
-        minimize : true,
-        sourceMap : false,
-        mangle: true,
-        compress: {
-          warnings: false
-        }
-      })
+      }
     ]
-  };
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      sourceMap: false,
+      mangle: true,
+      compress: {
+        warnings: false
+      }
+    })
+  ]
+};
 
 module.exports = [
-    merge(commonConfig, {
-        entry: path.resolve(__dirname + '/src/App.vue'),
-        output: {
-          filename: 'vue-pagination.js',
-          libraryTarget: 'umd',
-          library: 'Pagination',
-          umdNamedDefine: true
-        }
-    })
+  merge(commonConfig, {
+    entry: path.resolve(__dirname + '/src/App.vue'),
+    output: {
+      filename: 'vue-pagination.js',
+      libraryTarget: 'umd',
+      library: 'Pagination',
+      umdNamedDefine: true
+    }
+  })
 ];
