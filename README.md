@@ -1,29 +1,51 @@
-# Testing
-
-0.1.x version is testing.
-
-sorry no download please.
-
-
 
 # vue-pagination
 
-> pagination
+> Supports Vue 2.x later
 
-## Build Setup
+## Introduction
+
+You can create a bulletin board with just array data.
+Use it comfortably !
+
+## installation
 
 ``` bash
-# install dependencies
-npm install
+npm install --save @dinnerkang/vue-pagination
+```
+## Usage
 
-# serve with hot reload at localhost:8080
-npm run dev
+``` bash
+<template>
+    <div>
+        <Pagination :data="array"></Pagination>
+    </div>
+</template>
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+<script>
+import Pagination from '@dinnerkang/vue-pagination'
+export default{
+    data(){
+        return{
+            array : [{
+                "test Data" : "hi",
+                "test_2 Data" : 2
+            },{
+                "test Data" : "hi2",
+                "test_2 Data" : 3
+            }]
+        }
+    }
+}
+</script>
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Attention is ':data' required
+
+
+## Questions or Issue
+
+Please send mail to jenhyuk0318@gmail.com
+or
+Leave the issue to Git
+
