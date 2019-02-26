@@ -73,12 +73,14 @@ export default {
   },
   methods: {
     makeList: function() {
-      
       this.list_header = Object.keys(this.data[0]);
       this.list_header.unshift("No");
-      this.list_row = this.data.length;
-      for (let i = 1; i < this.list_row + 1; i++) {
-        this.no.push(i);
+
+      if ((this.list_row == 0)) {
+        this.list_row = this.data.length;
+        for (let i = 1; i < this.list_row + 1; i++) {
+          this.no.push(i);
+        }
       }
     },
     nextPage: function() {
