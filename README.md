@@ -20,7 +20,7 @@ npm install --save @dinnerkang/vue-pagination
 ``` bash
 <template>
     <div>
-        <Pagination :data="array"></Pagination>
+        <Pagination :data="array" :isIndex="true"></Pagination>
     </div>
 </template>
 
@@ -51,7 +51,7 @@ You must have a **':data'** <br>
 
 Sorting is available <br>
 
-If you do not want to 'Index' you must have a **':isIndex="false"**<br>
+If you do not want to 'Index' you must have a **':isIndex="true"**<br>
 
 ## Questions or Issue
 

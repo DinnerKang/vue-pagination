@@ -66,8 +66,7 @@ export default {
       required: true
     },
     isIndex: {
-      type: Boolean,
-      default: true
+      type: Boolean
     }
   },
   created() {
