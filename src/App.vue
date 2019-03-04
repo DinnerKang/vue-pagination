@@ -5,12 +5,15 @@
         <table id="table">
           <thead>
             <tr class="table_head">
-              <th v-for="data in list_header" v-bind:key="data">{{data}} <div class="arrow_down" v-on:click="sorting(data)"></div></th>
+              <th v-for="data in list_header" v-bind:key="data">
+                {{data}}
+                <div class="arrow_down" v-on:click="sorting(data)"></div>
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="(row, index) in list_row" v-bind:key="row">
-              <td class="idx">{{idx[index]}}</td>
+              <td class="idx" v-if="isIndex">{{idx[index]}}</td>
               <td class="list" v-for="list in paginatedData[index]" v-bind:key="list.ID">{{list}}</td>
             </tr>
           </tbody>
@@ -18,10 +21,10 @@
         <div id="pagination">
           <ul>
             <li class="page_list" v-on:click="firstPage()">
-              <img :src="first_arrow" class="page_button"  >
+              <img :src="first_arrow" class="page_button">
             </li>
-            <li class="page_list" v-on:click="prevPage()"> 
-              <img :src="pre_arrow" class="page_button"  >
+            <li class="page_list" v-on:click="prevPage()">
+              <img :src="pre_arrow" class="page_button">
             </li>
             <li
               class="page_list"
@@ -31,10 +34,10 @@
               :class=" { active_page : pageEvent(pageNum)}"
             >{{pageNum}}</li>
             <li class="page_list" v-on:click="nextPage()">
-              <img :src="pre_arrow" class="page_button next" >
+              <img :src="pre_arrow" class="page_button next">
             </li>
             <li class="page_list" v-on:click="endPage()">
-              <img :src="first_arrow" class="page_button next" >
+              <img :src="first_arrow" class="page_button next">
             </li>
           </ul>
         </div>
@@ -53,14 +56,18 @@ export default {
       size: 10,
       no: [],
       idx: [],
-      first_arrow: require('./assets/front-arrow.png'),
-      pre_arrow : require('./assets/pre-arrow.png')
+      first_arrow: require("./assets/front-arrow.png"),
+      pre_arrow: require("./assets/pre-arrow.png")
     };
   },
   props: {
     data: {
       type: Array,
       required: true
+    },
+    isIndex: {
+      type: Boolean,
+      default: true
     }
   },
   created() {
@@ -74,12 +81,15 @@ export default {
   methods: {
     makeList: function() {
       this.list_header = Object.keys(this.data[0]);
-      this.list_header.unshift("No");
-
-      if ((this.list_row == 0)) {
+      if (this.isIndex == true) {
+        this.list_header.unshift("No");
+      }
+      if (this.list_row == 0) {
         this.list_row = this.data.length;
-        for (let i = 1; i < this.list_row + 1; i++) {
-          this.no.push(i);
+        if (this.isIndex == ture) {
+          for (let i = 1; i < this.list_row + 1; i++) {
+            this.no.push(i);
+          }
         }
       }
     },
@@ -157,18 +167,18 @@ export default {
   font-size: 12px;
   text-align: center;
 }
-.table_head{
+.table_head {
   border-top: 2px solid #3a3b3d;
-  color:#333333;
+  color: #333333;
   background-color: #f2f2f2;
 }
-tr{
+tr {
   height: 48px;
 }
-tbody > tr{
-  color:#555555;
-  border-top:1px solid #cecece;
-  border-bottom:1px solid #cecece;;
+tbody > tr {
+  color: #555555;
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
 }
 ul,
 li {
@@ -187,9 +197,9 @@ li {
   align-items: center;
   justify-content: center;
   margin: 75px 3.5px 0;
-  width:32px;
+  width: 32px;
   height: 32px;
-  border : 1px solid #dedcde;
+  border: 1px solid #dedcde;
   cursor: pointer;
 }
 .active_page {
@@ -199,13 +209,13 @@ li {
   display: inline-block;
   margin-left: 3px;
   cursor: pointer;
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 5px solid #777777;
 }
-.next{
+.next {
   transform: rotate(180deg);
 }
 </style>
