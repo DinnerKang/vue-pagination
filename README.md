@@ -1,20 +1,20 @@
 
 # vue-pagination
 
-> Supports Vue 2.x
-> Test Version is 0.1.x
+> Supports Vue 2.x <br>
+> Test Version is 0.1.x && 0.2.x
 
 ## Introduction
 
 You can create a bulletin board with just array data.<br>
 Use it comfortably !<br>
 
-I want git star...
+I want Git Star...
 
 ## installation
 
 ``` bash
-npm install --save @dinnerkang/vue-pagination0.2.0
+npm install --save @dinnerkang/vue-pagination
 ```
 ## Usage
 ```bash
@@ -59,11 +59,11 @@ export default{
 
 <img src="./assets/board.png">
 
-You must have a **':data'** <br>
+You must have a **' :data="Your Array" '** <br>
 
 Sorting is available <br>
 
-If you do not want to 'Index' you must have a **':isIndex="true"**<br>
+If you do not want to 'Index' you must have a **' :isIndex="true" '**<br>
 
 ## Questions or Issue
 
