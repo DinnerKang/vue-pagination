@@ -1,7 +1,8 @@
 
 # vue-pagination
 
-> Supports Vue 2.x later
+> Supports Vue 2.x
+> Test Version is 0.1.x
 
 ## Introduction
 
@@ -13,7 +14,7 @@ I want git star...
 ## installation
 
 ``` bash
-npm install --save @dinnerkang/vue-pagination
+npm install --save @dinnerkang/vue-pagination0.2.0
 ```
 ## Usage
 

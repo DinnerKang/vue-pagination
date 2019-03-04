@@ -1,6 +1,6 @@
 {
   "name": "@dinnerkang/vue-pagination",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Vue Pagination Only Array",
   "author": "DinnerKang <jenhyuk0318@gmail.com>",
   "main": "dist/vue-pagination.js",
