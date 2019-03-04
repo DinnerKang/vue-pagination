@@ -17,6 +17,17 @@ I want git star...
 npm install --save @dinnerkang/vue-pagination0.2.0
 ```
 ## Usage
+```bash
+props: {
+    data: {
+      type: Array,
+      required: true
+    },
+    isIndex: {
+      type: Boolean
+    }
+  },
+```
 
 ``` bash
 <template>

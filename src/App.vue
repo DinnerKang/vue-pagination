@@ -85,10 +85,8 @@ export default {
       }
       if (this.list_row == 0) {
         this.list_row = this.data.length;
-        if (this.isIndex == true) {
-          for (let i = 1; i < this.list_row + 1; i++) {
-            this.no.push(i);
-          }
+        for (let i = 1; i < this.list_row + 1; i++) {
+          this.no.push(i);
         }
       }
     },
