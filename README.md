@@ -2,7 +2,9 @@
 # vue-pagination
 
 > Supports Vue 2.x <br>
-> Test Version is 0.1.x && 0.2.x
+> Test Version is 0.1.x
+
+[https://www.npmjs.com/package/@dinnerkang/vue-pagination](https://www.npmjs.com/package/@dinnerkang/vue-pagination)
 
 ## Introduction
 
