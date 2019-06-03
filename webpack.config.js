@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const path = require('path');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 var commonConfig = {
   output: {
@@ -33,14 +34,7 @@ var commonConfig = {
     ]
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      minimize: true,
-      sourceMap: false,
-      mangle: true,
-      compress: {
-        warnings: false
-      }
-    })
+    new UglifyJSPlugin()
   ]
 };
 
